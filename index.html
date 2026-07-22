@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawsRescue - Pet Adoption</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h1>🐾 PawsRescue</h1>
+    <p>Find your compatible rescue dog</p>
+  </header>
+
+  <main class="container">
+    <!-- Filter Sidebar -->
+    <aside class="sidebar">
+      <h3>Search Filters</h3>
+      <div class="filter-group">
+        <label for="sizeFilter">Size:</label>
+        <select id="sizeFilter">
+          <option value="All">All Sizes</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="envFilter">Environment:</label>
+        <select id="envFilter">
+          <option value="All">All Environments</option>
+          <option value="Apartment Friendly">Apartment Friendly</option>
+          <option value="House with Yard">House with Yard</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- Dog Display Grid -->
+    <section class="content">
+      <h2>Available Pets for Adoption</h2>
+      <div id="dogGrid" class="dog-grid">
+        <!-- Cards will render here dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Adoption Modal Form -->
+  <div id="adoptionModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h3>Submit Adoption Application</h3>
+      <form id="adoptForm">
+        <input type="hidden" id="selectedDog">
+        <label>Your Name:</label>
+        <input type="text" id="adopterName" required placeholder="Enter full name">
+        
+        <label>Your Email:</label>
+        <input type="email" id="adopterEmail" required placeholder="Enter email address">
+        
+        <button type="submit" class="btn">Submit Interest</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
